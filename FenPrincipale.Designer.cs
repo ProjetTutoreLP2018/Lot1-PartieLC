@@ -84,17 +84,17 @@
             this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OuvrirUnFichierClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GénérerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.QuitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.ouvrirSourceDonnees = new System.Windows.Forms.OpenFileDialog();
             this.ouvrirFichierClientBoutonBarreOutils = new System.Windows.Forms.ToolStripButton();
             this.genererBoutonBarreOutils = new System.Windows.Forms.ToolStripButton();
-            this.OuvrirUnFichierClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.GénérerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.QuitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ouvrirSourceDonnees = new System.Windows.Forms.OpenFileDialog();
             this.Onglets.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -457,9 +457,15 @@
             // produitExploitationEstime
             // 
             this.produitExploitationEstime.Location = new System.Drawing.Point(189, 107);
+            this.produitExploitationEstime.Maximum = new decimal(new int[] {
+            -559939585,
+            902409669,
+            54,
+            0});
             this.produitExploitationEstime.Name = "produitExploitationEstime";
-            this.produitExploitationEstime.Size = new System.Drawing.Size(120, 22);
+            this.produitExploitationEstime.Size = new System.Drawing.Size(285, 22);
             this.produitExploitationEstime.TabIndex = 19;
+            this.produitExploitationEstime.ThousandsSeparator = true;
             // 
             // label18
             // 
@@ -534,9 +540,15 @@
             // VolumesAnnuels
             // 
             this.VolumesAnnuels.Location = new System.Drawing.Point(489, 84);
+            this.VolumesAnnuels.Maximum = new decimal(new int[] {
+            -1486618625,
+            232830643,
+            0,
+            0});
             this.VolumesAnnuels.Name = "VolumesAnnuels";
-            this.VolumesAnnuels.Size = new System.Drawing.Size(120, 22);
+            this.VolumesAnnuels.Size = new System.Drawing.Size(265, 22);
             this.VolumesAnnuels.TabIndex = 10;
+            this.VolumesAnnuels.ThousandsSeparator = true;
             // 
             // OrganisationComptable
             // 
@@ -548,9 +560,15 @@
             // Effectif
             // 
             this.Effectif.Location = new System.Drawing.Point(76, 56);
+            this.Effectif.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
             this.Effectif.Name = "Effectif";
             this.Effectif.Size = new System.Drawing.Size(120, 22);
             this.Effectif.TabIndex = 8;
+            this.Effectif.ThousandsSeparator = true;
             // 
             // CA
             // 
@@ -641,70 +659,6 @@
             this.FichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.FichierToolStripMenuItem.Text = "Fichier";
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
-            // 
-            // outilsToolStripMenuItem
-            // 
-            this.outilsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.paramètresToolStripMenuItem});
-            this.outilsToolStripMenuItem.Name = "outilsToolStripMenuItem";
-            this.outilsToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.outilsToolStripMenuItem.Text = "Outils";
-            // 
-            // paramètresToolStripMenuItem
-            // 
-            this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
-            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.paramètresToolStripMenuItem.Text = "Paramètres";
-            this.paramètresToolStripMenuItem.Click += new System.EventHandler(this.paramètresToolStripMenuItem_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(799, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ouvrirFichierClientBoutonBarreOutils,
-            this.genererBoutonBarreOutils});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(799, 25);
-            this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // ouvrirSourceDonnees
-            // 
-            this.ouvrirSourceDonnees.Filter = "Documents Excel|*.xlsx";
-            this.ouvrirSourceDonnees.Title = "Sélectionner un fichier client";
-            // 
-            // ouvrirFichierClientBoutonBarreOutils
-            // 
-            this.ouvrirFichierClientBoutonBarreOutils.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ouvrirFichierClientBoutonBarreOutils.Image = global::lot1.Properties.Resources.ouvrir;
-            this.ouvrirFichierClientBoutonBarreOutils.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ouvrirFichierClientBoutonBarreOutils.Name = "ouvrirFichierClientBoutonBarreOutils";
-            this.ouvrirFichierClientBoutonBarreOutils.Size = new System.Drawing.Size(23, 22);
-            this.ouvrirFichierClientBoutonBarreOutils.Text = "toolStripButton1";
-            this.ouvrirFichierClientBoutonBarreOutils.Click += new System.EventHandler(this.ouvrirFichierClientBoutonBarreOutils_Click);
-            // 
-            // genererBoutonBarreOutils
-            // 
-            this.genererBoutonBarreOutils.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.genererBoutonBarreOutils.Image = global::lot1.Properties.Resources.generer;
-            this.genererBoutonBarreOutils.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.genererBoutonBarreOutils.Name = "genererBoutonBarreOutils";
-            this.genererBoutonBarreOutils.Size = new System.Drawing.Size(23, 22);
-            this.genererBoutonBarreOutils.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
-            this.genererBoutonBarreOutils.Click += new System.EventHandler(this.genererBoutonBarreOutils_Click);
-            // 
             // OuvrirUnFichierClientToolStripMenuItem
             // 
             this.OuvrirUnFichierClientToolStripMenuItem.Image = global::lot1.Properties.Resources.ouvrir;
@@ -730,6 +684,70 @@
             this.QuitterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
             this.QuitterToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.QuitterToolStripMenuItem.Text = "Quitter";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
+            // 
+            // outilsToolStripMenuItem
+            // 
+            this.outilsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paramètresToolStripMenuItem});
+            this.outilsToolStripMenuItem.Name = "outilsToolStripMenuItem";
+            this.outilsToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.outilsToolStripMenuItem.Text = "Outils";
+            // 
+            // paramètresToolStripMenuItem
+            // 
+            this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
+            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.paramètresToolStripMenuItem.Text = "Paramètres";
+            this.paramètresToolStripMenuItem.Click += new System.EventHandler(this.paramètresToolStripMenuItem_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(799, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ouvrirFichierClientBoutonBarreOutils,
+            this.genererBoutonBarreOutils});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(799, 25);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // ouvrirFichierClientBoutonBarreOutils
+            // 
+            this.ouvrirFichierClientBoutonBarreOutils.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ouvrirFichierClientBoutonBarreOutils.Image = global::lot1.Properties.Resources.ouvrir;
+            this.ouvrirFichierClientBoutonBarreOutils.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ouvrirFichierClientBoutonBarreOutils.Name = "ouvrirFichierClientBoutonBarreOutils";
+            this.ouvrirFichierClientBoutonBarreOutils.Size = new System.Drawing.Size(23, 22);
+            this.ouvrirFichierClientBoutonBarreOutils.Text = "toolStripButton1";
+            this.ouvrirFichierClientBoutonBarreOutils.Click += new System.EventHandler(this.ouvrirFichierClientBoutonBarreOutils_Click);
+            // 
+            // genererBoutonBarreOutils
+            // 
+            this.genererBoutonBarreOutils.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.genererBoutonBarreOutils.Image = global::lot1.Properties.Resources.generer;
+            this.genererBoutonBarreOutils.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.genererBoutonBarreOutils.Name = "genererBoutonBarreOutils";
+            this.genererBoutonBarreOutils.Size = new System.Drawing.Size(23, 22);
+            this.genererBoutonBarreOutils.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
+            this.genererBoutonBarreOutils.Click += new System.EventHandler(this.genererBoutonBarreOutils_Click);
+            // 
+            // ouvrirSourceDonnees
+            // 
+            this.ouvrirSourceDonnees.Filter = "Documents Excel|*.xlsx";
+            this.ouvrirSourceDonnees.Title = "Sélectionner un fichier client";
             // 
             // FenPrincipale
             // 
