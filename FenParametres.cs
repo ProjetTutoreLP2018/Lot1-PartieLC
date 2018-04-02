@@ -21,10 +21,10 @@ namespace lot1
 
         private void listBox1_Click(object sender, EventArgs e)
         {
-            UserControl ControleUtilisateur = panneaux[listBox1.SelectedIndex];
-            ControleUtilisateur.Dock = DockStyle.Fill;
+            UserControl controleUtilisateur = panneaux[listBox1.SelectedIndex];
+            controleUtilisateur.Dock = DockStyle.Fill;
             panneau.Controls.Clear();
-            panneau.Controls.Add(ControleUtilisateur);
+            panneau.Controls.Add(controleUtilisateur);
         }
 
         private void FenParametres_Load(object sender, EventArgs e)

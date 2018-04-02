@@ -87,7 +87,6 @@
             this.OuvrirUnFichierClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GénérerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QuitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -95,6 +94,7 @@
             this.ouvrirFichierClientBoutonBarreOutils = new System.Windows.Forms.ToolStripButton();
             this.genererBoutonBarreOutils = new System.Windows.Forms.ToolStripButton();
             this.ouvrirSourceDonnees = new System.Windows.Forms.OpenFileDialog();
+            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Onglets.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -641,8 +641,8 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Menu;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FichierToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.outilsToolStripMenuItem});
+            this.outilsToolStripMenuItem,
+            this.aideToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(799, 24);
@@ -685,11 +685,6 @@
             this.QuitterToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.QuitterToolStripMenuItem.Text = "Quitter";
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
-            // 
             // outilsToolStripMenuItem
             // 
             this.outilsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -701,7 +696,7 @@
             // paramètresToolStripMenuItem
             // 
             this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
-            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.paramètresToolStripMenuItem.Text = "Paramètres";
             this.paramètresToolStripMenuItem.Click += new System.EventHandler(this.paramètresToolStripMenuItem_Click);
             // 
@@ -748,6 +743,12 @@
             // 
             this.ouvrirSourceDonnees.Filter = "Documents Excel|*.xlsx";
             this.ouvrirSourceDonnees.Title = "Sélectionner un fichier client";
+            // 
+            // aideToolStripMenuItem
+            // 
+            this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.aideToolStripMenuItem.Text = "Aide";
             // 
             // FenPrincipale
             // 
@@ -854,9 +855,9 @@
         private System.Windows.Forms.TextBox ProjetAFinancer;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.OpenFileDialog ouvrirSourceDonnees;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem outilsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
     }
 }
 

@@ -145,6 +145,7 @@ namespace lot1
                                 Madame.Checked = true;
                             }
 
+                            Millesime.Text = spreadsheet.Rows[1][1].ToString();
                             Nom.Text = spreadsheet.Rows[1][3].ToString();
                             Prenom.Text = spreadsheet.Rows[1][4].ToString();
                             Fonction.Text = spreadsheet.Rows[1][5].ToString();
