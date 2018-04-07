@@ -29,8 +29,8 @@ namespace lot1
 
         private void FenParametres_Load(object sender, EventArgs e)
         {
-            panneaux.Add(new FenParametresGeneraux());
-            panneaux.Add(new FenParametresBaseDeDonnees());
+            panneaux.Add(new UCFenParametresEmplacements());
+            panneaux.Add(new UCFenParametresBaseDeDonnees());
         }
     }
 }

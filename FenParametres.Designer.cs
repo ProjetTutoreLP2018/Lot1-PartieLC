@@ -63,6 +63,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Items.AddRange(new object[] {
+            "Général",
             "Emplacements",
             "Base de données"});
             this.listBox1.Location = new System.Drawing.Point(3, 2);

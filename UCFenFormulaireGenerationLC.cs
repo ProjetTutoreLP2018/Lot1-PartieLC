@@ -1,31 +1,28 @@
-﻿using ExcelDataReader;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Net;
-using System.Net.Http;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using ExcelDataReader;
 using Xceed.Words.NET;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace lot1
 {
-    public partial class FenPrincipale : Form
+    public partial class UCFenFormulaireGenerationLC : UserControl
     {
-        /// <summary>
-        /// Initialise les composants graphiques et met la date de la lettre de coopération à la date du jour
-        /// </summary>
-        public FenPrincipale()
+        public UCFenFormulaireGenerationLC()
         {
             InitializeComponent();
             DateCourante.Value = DateTime.Now;
         }
-        
-        /// <summary>
-        /// Permet d'afficher la ville associée au code postal entré dans le champ Ville 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private async void CP_TextChanged(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(CP.Text))
@@ -112,7 +109,7 @@ namespace lot1
 
                     foreach (var item in valeurs)
                     {
-                        document.ReplaceText("{{" + item.Key + "}}", item.Value);
+                        document.ReplaceText("{{" + item.Key + "}}", (String.IsNullOrWhiteSpace(item.Value) ? item.Key : item.Value));
                     }
 
                     document.SaveAs(@fenGenerationLC.DestinationSelectionnee);
@@ -158,45 +155,6 @@ namespace lot1
                     }
                 }
             }
-        }
-
-        private void OuvrirUnFichierClientToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ChargerDonnees();
-        }
-
-        private void GénérerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GenererLC();
-        }
-
-        private void ouvrirFichierClientBoutonBarreOutils_Click(object sender, EventArgs e)
-        {
-            ChargerDonnees();
-        }
-
-        private void genererBoutonBarreOutils_Click(object sender, EventArgs e)
-        {
-            GenererLC();
-        }
-
-        private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FenParametres fenParametres = new FenParametres();
-            fenParametres.Show();
-        }
-
-        private void àProposToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BoiteDialogueAPropos boiteDialogueAPropos = new BoiteDialogueAPropos();
-            boiteDialogueAPropos.ShowDialog(this);
-        }
-
-        private void recharcherLesMisesÀJourToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //TODO : Mettre en place la comparaison entre un fichier sur le repo et la version de l'Assembly en utilisant WebClient, télécharger l'installateur et l'exécuter en utilisant Process
-            WebClient webClient = new WebClient();
-            //webClient.DownloadFileAsync
         }
     }
 }

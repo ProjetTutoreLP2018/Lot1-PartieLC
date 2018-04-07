@@ -1,6 +1,6 @@
 ﻿namespace lot1
 {
-    partial class FenParametresBaseDeDonnees
+    partial class UCFenParametresBaseDeDonnees
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.

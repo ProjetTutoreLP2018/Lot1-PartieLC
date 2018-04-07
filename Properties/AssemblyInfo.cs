@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("lot1")]
+[assembly: AssemblyTitle("Générateur de lettres de coopération")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyCompany("IUT Paris Descartes - LP MICDTL - 2017/2018")]
 [assembly: AssemblyProduct("lot1")]
-[assembly: AssemblyCopyright("Copyright © HP Inc. 2018")]
+[assembly: AssemblyCopyright("Sous licence libre")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

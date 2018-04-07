@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace lot1
 {
-    public partial class FenParametresGeneraux : UserControl
+    public partial class UCFenParametresBaseDeDonnees : UserControl
     {
-        public FenParametresGeneraux()
+        public UCFenParametresBaseDeDonnees()
         {
             InitializeComponent();
         }
-
     }
 }
