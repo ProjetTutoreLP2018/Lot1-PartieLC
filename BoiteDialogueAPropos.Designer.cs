@@ -28,6 +28,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.image = new System.Windows.Forms.PictureBox();
             this.labelNomLogiciel = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
@@ -35,7 +36,6 @@
             this.labelSociete = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
             this.listeAuteurs = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,19 @@
             this.tableLayoutPanel.Size = new System.Drawing.Size(417, 265);
             this.tableLayoutPanel.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(172, 104);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
+            this.label1.MaximumSize = new System.Drawing.Size(0, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 17);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Auteurs :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // image
             // 
             this.image.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -75,7 +88,7 @@
             this.image.Name = "image";
             this.tableLayoutPanel.SetRowSpan(this.image, 7);
             this.image.Size = new System.Drawing.Size(160, 259);
-            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.image.TabIndex = 12;
             this.image.TabStop = false;
             // 
@@ -144,19 +157,6 @@
             this.listeAuteurs.Name = "listeAuteurs";
             this.listeAuteurs.Size = new System.Drawing.Size(245, 95);
             this.listeAuteurs.TabIndex = 25;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 104);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
-            this.label1.MaximumSize = new System.Drawing.Size(0, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 17);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Auteurs :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BoiteDialogueAPropos
             // 

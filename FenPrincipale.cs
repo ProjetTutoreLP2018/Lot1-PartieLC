@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Reflection;
 using System.Windows.Forms;
 using Xceed.Words.NET;
 
@@ -18,7 +19,6 @@ namespace lot1
         public FenPrincipale()
         {
             InitializeComponent();
-            DateCourante.Value = DateTime.Now;
         }
         
         /// <summary>
@@ -28,7 +28,7 @@ namespace lot1
         /// <param name="e"></param>
         private async void CP_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(CP.Text))
+           /* if (String.IsNullOrEmpty(CP.Text))
             {
                 Ville.Items.Clear();
             }
@@ -62,7 +62,7 @@ namespace lot1
                 {
                     MessageBox.Show("Le code postal entré semble ne correspondre à aucune ville. \nAssurez-vous que le code postal est valide.", "Code postal incorrect", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-            }
+            }*/
         }
 
         /// <summary>
@@ -112,11 +112,11 @@ namespace lot1
 
                     foreach (var item in valeurs)
                     {
-                        document.ReplaceText("{{" + item.Key + "}}", item.Value);
+                        document.ReplaceText(Properties.Settings.Default.DelimiteurDebutVariable + item.Key + Properties.Settings.Default.DelimiteurFinVariable, item.Value);
                     }
 
                     document.SaveAs(@fenGenerationLC.DestinationSelectionnee);
-                    MessageBox.Show("La lettre de coopération a été générée dans le fichier " + fenGenerationLC.DestinationSelectionnee, "Lettre de coopération générée", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("La lettre de coopération a été générée dans le fichier " + fenGenerationLC.DestinationSelectionnee + ".\nAssurez-vous que la lettre de coopération générée ne contient pas d'erreurs, modifiez-la si nécessaire.", "Lettre de coopération générée", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -126,6 +126,7 @@ namespace lot1
         /// </summary>
         private void ChargerDonnees()
         {
+            ouvrirSourceDonnees.InitialDirectory = Properties.Settings.Default.EmplacementFichiersClient;
             if (ouvrirSourceDonnees.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 using (var stream = File.Open(@ouvrirSourceDonnees.FileName, FileMode.Open, FileAccess.Read))
@@ -160,43 +161,92 @@ namespace lot1
             }
         }
 
-        private void OuvrirUnFichierClientToolStripMenuItem_Click(object sender, EventArgs e)
+        public void ChargerParametres()
         {
-            ChargerDonnees();
+            DateCourante.Format = Properties.Settings.Default.FormatDate == 0 ?
+                DateTimePickerFormat.Short : DateTimePickerFormat.Long;
+            Millesime.Text = Properties.Settings.Default.MillesimeADateCourante ? 
+                DateTime.Today.Year.ToString() : String.Empty;
+            DateImmatriculation.Format = Properties.Settings.Default.FormatDate == 0 ?
+                DateTimePickerFormat.Short : DateTimePickerFormat.Long;
+            FormeJuridique.Items.Clear();
+            foreach(var item in Properties.Settings.Default.FormesJuridiques)
+            {
+                FormeJuridique.Items.Add(item);
+            }
         }
 
-        private void GénérerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FenPrincipale_Load(object sender, EventArgs e)
+        {
+            ChargerParametres();
+        }
+
+        private void PreremplirAutomatiquement()
+        {
+            FenPreRemplissageAutomatique fenPreRemplissageAutomatique = new FenPreRemplissageAutomatique();
+            if (fenPreRemplissageAutomatique.ShowDialog(this) == DialogResult.OK)
+            {
+                Record enregistrement = fenPreRemplissageAutomatique.entrepriseSelectionnee;
+                RaisonSociale.Text = enregistrement.fields.l1_normalisee;
+                FormeJuridique.Text = enregistrement.fields.libnj.Split(',')[0];
+                Adresse.Text = String.Format("{0} {1} {2}", enregistrement.fields.numvoie, enregistrement.fields.typvoie, enregistrement.fields.libvoie);
+                CP.Text = enregistrement.fields.codpos;
+                Ville.Text = enregistrement.fields.libcom;
+                Activite.Text = enregistrement.fields.libapet;
+            }
+        }
+
+        private void générerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             GenererLC();
         }
 
-        private void ouvrirFichierClientBoutonBarreOutils_Click(object sender, EventArgs e)
+        private void quitterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void préremplirAutomatiquementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PreremplirAutomatiquement();
+        }
+
+        private void préremplirAvecUnFichierClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChargerDonnees();
         }
 
-        private void genererBoutonBarreOutils_Click(object sender, EventArgs e)
-        {
-            GenererLC();
-        }
-
-        private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
+        private void paramètresToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FenParametres fenParametres = new FenParametres();
-            fenParametres.Show();
+            if(fenParametres.ShowDialog(this) == DialogResult.OK)
+            {
+                ChargerParametres();
+            }
         }
 
-        private void àProposToolStripMenuItem_Click(object sender, EventArgs e)
+        private void àProposToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             BoiteDialogueAPropos boiteDialogueAPropos = new BoiteDialogueAPropos();
             boiteDialogueAPropos.ShowDialog(this);
+            SIRET formulaireClient = new SIRET();
+            formulaireClient.Show();
+
         }
 
-        private void recharcherLesMisesÀJourToolStripMenuItem_Click(object sender, EventArgs e)
+        private void générerStripButton1_Click(object sender, EventArgs e)
         {
-            //TODO : Mettre en place la comparaison entre un fichier sur le repo et la version de l'Assembly en utilisant WebClient, télécharger l'installateur et l'exécuter en utilisant Process
-            WebClient webClient = new WebClient();
-            //webClient.DownloadFileAsync
+            GenererLC();
+        }
+
+        private void préremplirAutomatiquementToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PreremplirAutomatiquement();
+        }
+
+        private void préremplirAvecUnFichierClientToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ChargerDonnees();
         }
     }
 }

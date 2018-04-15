@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Resources;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,10 +7,10 @@ using System.Runtime.InteropServices;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("Générateur de lettres de coopération")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Permet de créer des lettres de coopération facilement")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("IUT Paris Descartes - LP MICDTL - 2017/2018")]
-[assembly: AssemblyProduct("lot1")]
+[assembly: AssemblyProduct("Générateur de lettres de coopération")]
 [assembly: AssemblyCopyright("Sous licence libre")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -34,3 +35,5 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguage("fr-FR")]
+

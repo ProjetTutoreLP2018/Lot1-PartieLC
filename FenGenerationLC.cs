@@ -24,12 +24,11 @@ namespace lot1
         public String DestinationSelectionnee;
 
         /// <summary>
-        /// Initialise les composants graphiques et active ou désactive le bouton Générer
+        /// Initialise les composants graphiques
         /// </summary>
         public FenGenerationLC()
         {
             InitializeComponent();
-            ActiverBoutonGenerer();
         }
 
         /// <summary>
@@ -39,7 +38,7 @@ namespace lot1
         /// <param name="e"></param>
         private void ParcourirModele_Click(object sender, EventArgs e)
         {
-            OuvrirModele.InitialDirectory = Properties.Settings.Default.dossierLC;
+            //OuvrirModele.InitialDirectory = Properties.Settings.Default.dossierLC;
             if(OuvrirModele.ShowDialog() == DialogResult.OK)
             {
                 SelectionModele.Text = OuvrirModele.FileName;
@@ -142,6 +141,17 @@ namespace lot1
                 AffichageErreurs.SetError(SelectionModele, "Le fichier n'existe pas");
             }
             ActiverBoutonGenerer();
+        }
+
+        private void FenGenerationLC_Load(object sender, EventArgs e)
+        {
+            ActiverBoutonGenerer();
+
+        }
+
+        private void ChargerParametres()
+        {
+            Properties.Settings parametres = Properties.Settings.Default;
         }
     }
 }

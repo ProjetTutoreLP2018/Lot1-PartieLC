@@ -178,6 +178,7 @@
             this.Name = "FenGenerationLC";
             this.ShowIcon = false;
             this.Text = "Nouvelle lettre de coopération";
+            this.Load += new System.EventHandler(this.FenGenerationLC_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

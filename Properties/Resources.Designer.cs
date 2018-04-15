@@ -63,9 +63,49 @@ namespace lot1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap generer {
+        internal static System.Drawing.Bitmap Close_16x {
             get {
-                object obj = ResourceManager.GetObject("generer", resourceCulture);
+                object obj = ResourceManager.GetObject("Close_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Copy_16x {
+            get {
+                object obj = ResourceManager.GetObject("Copy_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cut_16x {
+            get {
+                object obj = ResourceManager.GetObject("Cut_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenerateAllFromTemplate_16x {
+            get {
+                object obj = ResourceManager.GetObject("GenerateAllFromTemplate_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HelpApplication_16x {
+            get {
+                object obj = ResourceManager.GetObject("HelpApplication_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +133,9 @@ namespace lot1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ouvrir {
+        internal static System.Drawing.Bitmap Paste_16x {
             get {
-                object obj = ResourceManager.GetObject("ouvrir", resourceCulture);
+                object obj = ResourceManager.GetObject("Paste_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +143,9 @@ namespace lot1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap quitter {
+        internal static System.Drawing.Bitmap Pen2_16x {
             get {
-                object obj = ResourceManager.GetObject("quitter", resourceCulture);
+                object obj = ResourceManager.GetObject("Pen2_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +153,39 @@ namespace lot1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap suivant {
+        internal static System.Drawing.Bitmap Redo_grey_16x {
             get {
-                object obj = ResourceManager.GetObject("suivant", resourceCulture);
+                object obj = ResourceManager.GetObject("Redo_grey_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Toolbox_16x {
+            get {
+                object obj = ResourceManager.GetObject("Toolbox_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Undo_grey_16x {
+            get {
+                object obj = ResourceManager.GetObject("Undo_grey_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UploadFile_16x {
+            get {
+                object obj = ResourceManager.GetObject("UploadFile_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

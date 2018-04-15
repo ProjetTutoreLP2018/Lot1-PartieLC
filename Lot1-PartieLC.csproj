@@ -26,6 +26,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,6 +49,11 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.png</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExcelDataReader, Version=3.4.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
@@ -55,14 +62,76 @@
     <Reference Include="ExcelDataReader.DataSet, Version=3.4.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
       <HintPath>packages\ExcelDataReader.DataSet.3.4.0\lib\net45\ExcelDataReader.DataSet.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.EntityFrameworkCore.2.0.2\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.EntityFrameworkCore.Relational.2.0.2\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.EntityFrameworkCore.SqlServer.2.0.2\lib\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Caching.Abstractions.2.0.1\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Caching.Memory.2.0.1\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Abstractions.2.0.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.2.0.1\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.2.0.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.2.0.1\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.1.4.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.2.0.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.4.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Interactive.Async, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>packages\System.Interactive.Async.3.1.1\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.4.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -79,28 +148,71 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassesMetier\Activite.cs" />
+    <Compile Include="ClassesMetier\Adresse.cs" />
+    <Compile Include="ClassesMetier\Client.cs" />
+    <Compile Include="ClassesMetier\Droit.cs" />
+    <Compile Include="ClassesMetier\Etat.cs" />
+    <Compile Include="ClassesMetier\Lc.cs" />
+    <Compile Include="ClassesMetier\LCBDContext.cs" />
+    <Compile Include="ClassesMetier\Model.cs" />
+    <Compile Include="ClassesMetier\Modele.cs" />
+    <Compile Include="ClassesMetier\Statut.cs" />
+    <Compile Include="ClassesMetier\TypeStatut.cs" />
+    <Compile Include="ClassesMetier\Utilisateur.cs" />
     <Compile Include="BoiteDialogueAPropos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BoiteDialogueAPropos.Designer.cs">
       <DependentUpon>BoiteDialogueAPropos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassesMetier\Facet.cs" />
+    <Compile Include="ClassesMetier\FacetGroup.cs" />
     <Compile Include="FenParametres.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FenParametres.Designer.cs">
       <DependentUpon>FenParametres.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCFenParametresBaseDeDonnees.cs">
+    <Compile Include="FenCreationClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FenCreationClient.Designer.cs">
+      <DependentUpon>FenCreationClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FenPreRemplissageAutomatique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FenPreRemplissageAutomatique.Designer.cs">
+      <DependentUpon>FenPreRemplissageAutomatique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassesMetier\Fields.cs" />
+    <Compile Include="ClassesMetier\Geometry.cs" />
+    <Compile Include="ClassesMetier\Parameters.cs" />
+    <Compile Include="ClassesMetier\Record.cs" />
+    <Compile Include="ClassesMetier\Settings.cs" />
+    <Compile Include="ClassesMetier\SIRENE.cs" />
+    <Compile Include="FormulaireClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaireClient.Designer.cs">
+      <DependentUpon>FormulaireClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsParametres\UCFenParametresBaseDeDonnees.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCFenParametresBaseDeDonnees.Designer.cs">
+    <Compile Include="UserControlsParametres\UCFenParametresBaseDeDonnees.Designer.cs">
       <DependentUpon>UCFenParametresBaseDeDonnees.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCFenParametresEmplacements.cs">
+    <Compile Include="UserControlsParametres\UCFenParametresEmplacements.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCFenParametresEmplacements.Designer.cs">
+    <Compile Include="UserControlsParametres\UCFenParametresEmplacements.Designer.cs">
       <DependentUpon>UCFenParametresEmplacements.cs</DependentUpon>
     </Compile>
     <Compile Include="FenPrincipale.cs">
@@ -117,23 +229,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UCFenParametresGeneraux.cs">
+    <Compile Include="UserControlsParametres\UCFenParametresGeneraux.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCFenParametresGeneraux.Designer.cs">
+    <Compile Include="UserControlsParametres\UCFenParametresGeneraux.Designer.cs">
       <DependentUpon>UCFenParametresGeneraux.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ville.cs" />
+    <Compile Include="ClassesMetier\Ville.cs" />
+    <Compile Include="UserControlsParametres\UCFenParametresPreRemplissage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsParametres\UCFenParametresPreRemplissage.Designer.cs">
+      <DependentUpon>UCFenParametresPreRemplissage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BoiteDialogueAPropos.resx">
       <DependentUpon>BoiteDialogueAPropos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FenParametres.resx">
       <DependentUpon>FenParametres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCFenParametresBaseDeDonnees.resx">
+    <EmbeddedResource Include="FenCreationClient.resx">
+      <DependentUpon>FenCreationClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FenPreRemplissageAutomatique.resx">
+      <DependentUpon>FenPreRemplissageAutomatique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaireClient.resx">
+      <DependentUpon>FormulaireClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsParametres\UCFenParametresBaseDeDonnees.resx">
       <DependentUpon>UCFenParametresBaseDeDonnees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCFenParametresEmplacements.resx">
+    <EmbeddedResource Include="UserControlsParametres\UCFenParametresEmplacements.resx">
       <DependentUpon>UCFenParametresEmplacements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FenPrincipale.resx">
@@ -144,16 +271,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="UCFenParametresGeneraux.resx">
+    <EmbeddedResource Include="UserControlsParametres\UCFenParametresGeneraux.resx">
       <DependentUpon>UCFenParametresGeneraux.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsParametres\UCFenParametresPreRemplissage.resx">
+      <DependentUpon>UCFenParametresPreRemplissage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -168,18 +293,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ouvrir.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\generer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\quitter.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\suivant.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -200,7 +313,33 @@
     <None Include="Resources\logo1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\GenerateAllFromTemplate_16x.png" />
+    <None Include="Resources\Pen2_16x.png" />
+    <None Include="Resources\HelpApplication_16x.png" />
+    <None Include="Resources\Close_16x.png" />
+    <None Include="Resources\Toolbox_16x.png" />
+    <None Include="Resources\Copy_16x.png" />
+    <None Include="Resources\Cut_16x.png" />
+    <None Include="Resources\Paste_16x.png" />
+    <None Include="Resources\Redo_grey_16x.png" />
+    <None Include="Resources\Undo_grey_16x.png" />
+    <None Include="Resources\UploadFile_16x.png" />
+    <Content Include="FodyWeavers.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="logo.png" />
     <Content Include="version.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>
