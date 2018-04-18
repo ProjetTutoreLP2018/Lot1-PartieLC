@@ -229,7 +229,7 @@ namespace lot1
         {
             BoiteDialogueAPropos boiteDialogueAPropos = new BoiteDialogueAPropos();
             boiteDialogueAPropos.ShowDialog(this);
-            SIRET formulaireClient = new SIRET();
+            FormulaireClient formulaireClient = new FormulaireClient();
             formulaireClient.Show();
 
         }

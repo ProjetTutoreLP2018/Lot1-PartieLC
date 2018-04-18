@@ -19,7 +19,8 @@ namespace lot1
         private UCFenParametresEmplacements fenParametresEmplacements = new UCFenParametresEmplacements();
         private UCFenParametresBaseDeDonnees fenParametresBaseDeDonnees = new UCFenParametresBaseDeDonnees();
 		private UCFenParametresPreRemplissage fenParametresPreRemplissage = new UCFenParametresPreRemplissage();
-        public FenParametres()
+
+		public FenParametres()
         {
             InitializeComponent();
         }
@@ -46,7 +47,7 @@ namespace lot1
             fenParametresGeneraux.SauvegarderParametres();
             fenParametresEmplacements.SauvegarderParametres();
 			fenParametresPreRemplissage.SauvegarderParametres();
-			//fenParametresBaseDeDonnees.Sauve
+			fenParametresBaseDeDonnees.SauvegarderParametres();
             Close();
         }
 
@@ -57,6 +58,7 @@ namespace lot1
                 fenParametresGeneraux.ChargerParametresParDefaut();
                 fenParametresEmplacements.ChargerParametresParDefaut();
 				fenParametresPreRemplissage.ChargerParametresParDefaut();
+				fenParametresBaseDeDonnees.ChargerParametresParDefaut();
                 MessageBox.Show("Les paramètres ont été réinitialisés avec succès", "Réinitialisation des paramètres");
             }
         }

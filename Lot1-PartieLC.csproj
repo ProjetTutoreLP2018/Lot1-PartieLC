@@ -203,6 +203,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UCFenFormClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFenFormClient.Designer.cs">
+      <DependentUpon>UCFenFormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCFormulaireClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFormulaireClient.Designer.cs">
+      <DependentUpon>UCFormulaireClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlsParametres\UCFenParametresBaseDeDonnees.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -256,6 +268,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormulaireClient.resx">
       <DependentUpon>FormulaireClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCFenFormClient.resx">
+      <DependentUpon>UCFenFormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCFormulaireClient.resx">
+      <DependentUpon>UCFormulaireClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsParametres\UCFenParametresBaseDeDonnees.resx">
       <DependentUpon>UCFenParametresBaseDeDonnees.cs</DependentUpon>

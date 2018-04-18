@@ -67,17 +67,21 @@ namespace WindowsFormsApp1.modele
                 utilisateur.EmailUtilisateur= result.EmailUtilisateur;
                 utilisateur.MdpUtilisateur= result.MdpUtilisateur;
                 utilisateur.IdDroit = result.IdDroit;
-
             }
 
             return utilisateur;
 
         }
 
-        public void CreerClient(Client client)
-        {
-            context.Client.Add(client);
-            context.SaveChanges();
-        }
-    }
+		public void CreerClient(Client client) {
+			context.Client.Add(client);
+			context.SaveChanges();
+		}
+
+		public void CreerAdresse(Adresse adresse)
+		{
+			context.Adresse.Add(adresse);
+			context.SaveChanges();
+		}
+	}
 }
